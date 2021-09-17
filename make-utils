@@ -38,6 +38,6 @@ for script in $scripts; do
 		    echo "Creating symlink to $script in $dir_bin"
     		sudo ln -s $dir_main/$script $dir_bin/$script
     else
-        echo "$script does not exist or is already a symlink. Skipping..."
+        echo "$script already exists. Skipping..."
     fi
 done
