@@ -1,4 +1,4 @@
-# Utils
+# 🛠️ Utils
 My shell utility scripts
 
 ## To install (Linux and MacOS only):
