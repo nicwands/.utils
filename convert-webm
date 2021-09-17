@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+if [ $# -ne 2 ]
+then
+	echo "Usage: convert-webm <input-file> <output-file>"
+else
+	ffmpeg  -i $1 -b:v 0  -crf 30  -pass 1  -an -f webm /dev/null && ffmpeg  -i $1 -b:v 0  -crf 30  -pass 2 $2
+fi

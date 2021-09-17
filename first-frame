@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+if [ $# -ne 2 ]
+then
+	echo "Usage: first-frame <input-file> <output-file>"
+else
+	ffmpeg -ss 0 -i $1 -vframes 1 -f image2 $2
+fi

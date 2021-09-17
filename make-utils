@@ -1,0 +1,43 @@
+#! /bin/bash
+
+###################################################
+################### CREATED BY ####################
+#################### nicwands #####################
+########### https://github.com/nicwands ###########
+###################################################
+
+# make-utils - create symlinks from /usr/local/bin to home directory
+
+######## VARIABLES
+
+dir_main=~/.utils
+dir_bin=/usr/local/bin
+dir_backup=~/.utils-backup
+scripts="convert-webm first-frame"
+
+########
+
+# create backup in homedir
+echo -n "Creating $dir_backup for backup of existing scripts..."
+mkdir -p $dir_backup
+echo "done"
+
+# change to the bin directory
+echo -n "Changing to the $dir_bin directory ..."
+cd $dir_bin
+echo "done"
+
+# move any existing scripts in bin to backup directory, then create symlinks from the main directory to the bin directory
+for script in $scripts; do
+    if [ ! -f $script ]
+    then
+        echo "Moving $script from bin to $dir_backup"
+        sudo mv $dir_bin/$script $dir_backup/
+        echo "Copying $script from backup to $dir_main"
+    		cp $dir_backup/$script $dir_main/
+		    echo "Creating symlink to $script in $dir_bin"
+    		sudo ln -s $dir_main/$script $dir_bin/$script
+    else
+        echo "$script does not exist or is already a symlink. Skipping..."
+    fi
+done
