@@ -13,7 +13,7 @@
 dir_main=~/.utils
 dir_bin=/usr/local/bin
 dir_backup=~/.utils-backup
-scripts="convert-webm first-frame"
+scripts="convert-webm first-frame bstack"
 
 ########
 
