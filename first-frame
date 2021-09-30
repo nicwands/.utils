@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+# grap the first frame of a video and export as an image with ffmpeg
+
 if [ $# -ne 2 ]
 then
 	echo "Usage: first-frame <input-file> <output-file>"
