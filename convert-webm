@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+# convert video to webm format using ffmpeg
+
 if [ $# -ne 2 ]
 then
 	echo "Usage: convert-webm <input-file> <output-file>"
