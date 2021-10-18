@@ -1,0 +1,5 @@
+#! /bin/bash
+
+source $LOCALIFY/venv/bin/activate
+export FLASK_APP=$LOCALIFY/localify.py
+flask run
