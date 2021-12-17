@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+if [ $# -ne 2 ]
+then
+	echo "Usage: search <string-to-search> /path/to/search"
+else
+	grep -iRl $1 $2
+fi
