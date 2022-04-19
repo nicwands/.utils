@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+# convert video to gif using ffmpeg
+
+if [ $# -ne 2 ]
+then
+	echo "Usage: convert-gif <input-file> <output-file>"
+else
+	ffmpeg -i $1 -vf "fps=30,scale=500:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 $2
+fi
+

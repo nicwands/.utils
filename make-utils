@@ -8,12 +8,14 @@
 
 # make-utils - create symlinks from /usr/local/bin to home directory
 
+# TODO automatically read directory for files instead of scripts variable
+
 ######## VARIABLES
 
 dir_main=~/.utils
 dir_bin=/usr/local/bin
 dir_backup=~/.utils-backup
-scripts="convert-webm first-frame transparent-video bstack localify search"
+scripts="convert-webm convert-gif first-frame transparent-video bstack localify search"
 
 ########
 
