@@ -15,7 +15,7 @@
 dir_main=~/.utils
 dir_bin=/usr/local/bin
 dir_backup=~/.utils-backup
-scripts="convert-webm convert-gif first-frame transparent-video bstack localify search"
+scripts="convert-webm convert-gif first-frame transparent-video bstack localify search downsize-video"
 
 ########
 

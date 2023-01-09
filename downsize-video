@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+# downsize mp4 with ffmpeg
+
+if [ $# -ne 2 ]
+then
+	echo "Usage: downsize-video <input-file> <output-file>"
+else
+	ffmpeg -i $1 -vcodec libx264 -preset veryslow -crf 30 $2
+fi
